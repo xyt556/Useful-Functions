@@ -15,8 +15,8 @@ def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
        https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
 
     The user must specify which statistic to run, by default both tests are set to False. 
-    Function will returns two xarrrays, on conatining the statistic, and the other containing the p-values.
-    The default is NOT to mask the pixels with p-values > the specified level of significance (default is p=0.05).
+    Function will return two xarrrays, one conatining the statistic, and the other containing the p-values.
+    The default is NOT to mask the pixels with p-values > the specified level of significance (default p-valies is 0.05).
     If conducting levene stats, be aware that large datasets could take a long time to compute.
     
     Inputs:
@@ -25,7 +25,7 @@ def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
     t_test = Boolean. If True, conducts a per-pixel t-test
     levene_test = Boolean. If True, conducts a per-pixel levene-test
     mask_not_sig = Boolean. If True, mask out the values that don't achieve the desired level of significance
-    level_of_sig = Float.  The level of confidence you wish to have if masking. Usually 0.05 or 0.1
+    level_of_sig = Float.  The level of confidence you wish to have if masking. Usually 0.05 (default) or 0.1
     equal_variance, nan_policy, center = see scipy.stats documentation
     
     Last modified: June 2018
