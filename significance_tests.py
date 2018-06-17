@@ -23,7 +23,7 @@ def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
     xarray_a = an xarray dataArray containing observations from your first period of interest
     xarray_b = an xarray dataArray containing observations from your second period of interest
     t_test = Boolean. If True, conducts a per-pixel t-test
-    t_test = Boolean. If True, conducts a per-pixel levene-test
+    levene_test = Boolean. If True, conducts a per-pixel levene-test
     mask_not_sig = Boolean. If True, mask out the values that don't achieve the desired level of significance
     level_of_sig = Float.  The level of confidence you wish to have if masking. Usually 0.05 or 0.1
     equal_variance, nan_policy, center = see scipy.stats documentation
