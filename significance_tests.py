@@ -1,3 +1,7 @@
+import numpy as np
+import xarray as xr
+from scipy import stats
+
 def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
                        equal_variance = False, nan_policy= 'omit', mask_not_sig = False, 
                        level_of_sig = 0.05, center='mean'):
@@ -31,7 +35,7 @@ def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
     Last modified: June 2018
     Author: Chad Burton
     """
-    from scipy import stats
+    
     #convert into numpy ndarray arrays
     arr_1 = xarray_a.values
     arr_2 = xarray_b.values
