@@ -42,6 +42,9 @@ def significance_tests(xarray_a, xarray_b, t_test=False, levene_test=False,
     if (t_test==False and levene_test==False):
         print('Please specificy which statistic you want to run by including either "t_test=True" or "levene_test=True" in your function call')
     
+    if (t_test==True and levene_test==True):
+        print('One statistical test at a time please!')
+    
     if t_test:
         #run the t-test
         print('starting T-test')
