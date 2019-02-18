@@ -1,5 +1,5 @@
 
-def MAD(xarray, coords_label = ('x, 'y') , c=0.6745):
+def MAD(xarray, coords_label = ('x', 'y') , c=0.6745):
     """
     Calculate the per pixel median absolute deviation 
     see statsmodel.robust.mad for more info
