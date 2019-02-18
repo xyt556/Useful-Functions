@@ -6,7 +6,7 @@ def transform_tuple(ds, coords, epsg=3577, rotation=0.0):
     ds = xarray dataset or dataArray
     coords = tuple. The georeferencing coordinate data. e.g (ds.long,ds.lat) or (ds.x,ds.y)
                     Order MUST BE X then Y
-    epsg = the 
+    epsg = int. a projection in epsg format
     rotation = the degrees of rotation of the image. If North up, rotation = 0.0
     
     """
