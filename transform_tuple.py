@@ -22,4 +22,4 @@ def transform_tuple(ds, coords, epsg=3577, rotation=0.0):
     srs.ImportFromEPSG(epsg)
     prj_wkt = srs.ExportToWkt()
     
-    return transform, projection
+    return transform, prj_wkt
