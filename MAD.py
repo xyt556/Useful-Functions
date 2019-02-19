@@ -21,6 +21,6 @@ def MAD(xarray, coords_label = ('x', 'y') , c=0.6745):
         for y in range(y1):
             arr_2 = arr_1[:, x, y] #for each x,y position, create a 1D array of the timeseries
             arr_2 = arr_2[~np.isnan(arr_2)] #deal with the nans
-            mads[x,y] = robust.mad(arr_2, c=c) #run the test     
-    mads_np = mads
-    return mads_np
+            mads[x,y] = robust.mad(arr_2, c=c) #run the test 
+    mads_xr = xr.DataArray(mads, coords = [y, x], dims = [coords_label[1], coords_label[0]], name='MAD_stat')
+    return mads_xr
